@@ -16,10 +16,9 @@ const validation = (req: Request, res: Response, next: NextFunction) => {
   if (!token) {
     return res.status(401).json({ message: 'Token not found' });
   }
+
   const payload = decoded(token);
   req.body.userId = payload.id;
-
-  // if () return res.status(422).json({ message: 'Invalid token' });
 
   next();
 };

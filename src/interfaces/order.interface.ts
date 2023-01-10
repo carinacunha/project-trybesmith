@@ -11,7 +11,7 @@ export interface NewOrder {
 
 export interface Order {
   id?: number;
-  userId: number
-  productsIds: number[]
+  userId?: number;
+  productsIds: number[];
 
 }
